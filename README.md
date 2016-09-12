@@ -1,8 +1,45 @@
-# Ember-appboy
+# ember-appboy
 
-This README outlines the details of collaborating on this Ember addon.
+ember-appboy exposes the [appboy-web-sdk](https://github.com/Appboy/appboy-web-sdk)
+to your Ember app.
 
 ## Installation
+
+```bash
+ember install ember-appboy
+```
+
+## Usage
+```javascript
+import appboy from 'appboy';
+
+// Can be used anywhere - services, routes, components, etc.
+export default Ember.Route.extend({
+  actions: {
+    userDidChange(user) {
+      appboy.changeUser(user.get('id'));
+    }
+  }
+});
+```
+
+## Options
+If you only want to use the core-sdk (e.g. you won't be displaying any of the UI
+elements like In-App Messaging, the News Feed, and Feedback), you can define that
+in your `config/environment.js` file.
+
+```javascript
+// config/environment.js
+module.exports = function(environment) {
+  return {
+    appboy: {
+      coreOnly: true
+    }
+  };
+}
+```
+
+## Developing
 
 * `git clone <repository-url>` this repository
 * `cd ember-appboy`

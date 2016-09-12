@@ -1,7 +1,7 @@
 {
   "name": "ember-appboy",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Integrates the appboy web sdk into your ember app.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,11 @@
     "start": "ember server",
     "test": "ember try:each"
   },
-  "repository": "",
+  "repository": "https://github.com/blimmer/ember-appboy",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Ben Limmer <hello@benlimmer.com> (http://benlimmer.com/)",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
@@ -41,9 +41,14 @@
     "loader.js": "^4.0.1"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "appboy",
+    "appboy-web-sdk"
   ],
   "dependencies": {
+    "appboy-web-sdk": "^1.5.0",
+    "broccoli-funnel": "^1.0.6",
+    "broccoli-merge-trees": "^1.1.4",
     "ember-cli-babel": "^5.1.6"
   },
   "ember-addon": {
