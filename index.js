@@ -9,12 +9,14 @@ module.exports = {
   name: 'ember-appboy',
 
   included: function(app) {
-    this._super.included.apply(this, arguments);
-
     // see: https://github.com/ember-cli/ember-cli/issues/3718
     while (typeof app.import !== 'function' && app.app) {
       app = app.app;
     }
+
+    this.eachAddonInvoke('included', [app]);
+
+    this._super.included.apply(this, arguments);
 
     var vendor = this.treePaths.vendor;
     var options = (this.project.config(process.env.EMBER_ENV) || {}).appboy || {};
