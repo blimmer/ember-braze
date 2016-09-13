@@ -38,7 +38,7 @@ ember g initializer appboy
 Take a look at the
 [addon's implementation](https://github.com/blimmer/ember-appboy/blob/master/addon/initializers/appboy.js)
 to get a feel for what you should do in your custom initializer. The
-[appboy-web-sdk docs](https://js.appboycdn.com/web-sdk/1.5/doc/module-appboy.html)
+[appboy-web-sdk docs](https://www.appboy.com/documentation/Web/)
 will also help here.
 
 ### ES6 Module
