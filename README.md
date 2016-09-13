@@ -23,7 +23,23 @@ export default Ember.Route.extend({
 });
 ```
 
-## Options
+## Configuration
+
+### API Key
+You must set your api key for appboy to work correctly.
+
+```javascript
+// config/environment.js
+module.exports = function(environment) {
+  return {
+    appboy: {
+      apiKey: 'your-api-key'
+    }
+  };
+}
+```
+
+## Core SDK Only
 If you only want to use the core-sdk (e.g. you won't be displaying any of the UI
 elements like In-App Messaging, the News Feed, and Feedback), you can define that
 in your `config/environment.js` file.
@@ -33,6 +49,7 @@ in your `config/environment.js` file.
 module.exports = function(environment) {
   return {
     appboy: {
+      apiKey: 'your-api-key',
       coreOnly: true
     }
   };
