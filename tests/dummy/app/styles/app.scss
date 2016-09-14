@@ -2,7 +2,9 @@ $primary: 'appboy-black';
 
 @import 'color-palette';
 $color-appboy-black: (
+  '100': #1C222B,
   '500': #1C222B,
+  '600': #1C222B,
   'contrast': $light-contrast-color
 ) !default;
 
