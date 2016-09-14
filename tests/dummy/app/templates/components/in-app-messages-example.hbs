@@ -1,0 +1,41 @@
+<h3>Slide-Up In-App Message</h3>
+
+{{#paper-button raised=true onClick=(action showSlideUpMessage)}}
+  Slide-Up Example
+{{/paper-button}}
+
+<h3>Modal In-App Message</h3>
+
+{{#paper-button raised=true onClick=(action showModal)}}
+  Modal Example
+{{/paper-button}}
+
+<br />
+
+{{#paper-button id='trigger-modal-with-transition' raised=true onClick=(action showModalWithTransition)}}
+  Modal With Transition Example
+{{/paper-button}}
+
+<br />
+
+{{#paper-button id='trigger-modal-with-one-button' raised=true onClick=(action showModalWithOneButton)}}
+  Modal With One Button Example
+{{/paper-button}}
+
+<br />
+
+{{#paper-button id='trigger-modal-with-two-buttons' raised=true onClick=(action showModalWithTwoButtons)}}
+  Modal With Two Buttons Example
+{{/paper-button}}
+
+<h3>Fullscreen In-App Message</h3>
+
+{{#paper-button raised=true onClick=(action showFullWithOneButton)}}
+  Fullscreen Modal With One Button Example
+{{/paper-button}}
+
+<br />
+
+{{#paper-button raised=true onClick=(action showFullWithTwoButtons)}}
+  Fullscreen Modal With Two Buttons Example
+{{/paper-button}}

@@ -14,8 +14,6 @@ module.exports = {
       app = app.app;
     }
 
-    this.eachAddonInvoke('included', [app]);
-
     this._super.included.apply(this, arguments);
 
     var vendor = this.treePaths.vendor;

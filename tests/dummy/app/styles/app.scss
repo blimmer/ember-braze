@@ -1,0 +1,54 @@
+$primary: 'appboy-black';
+
+@import 'color-palette';
+$color-appboy-black: (
+  '500': #1C222B,
+  'contrast': $light-contrast-color
+) !default;
+
+$colors: map-merge($colors, (
+  'appboy-black': $color-appboy-black
+));
+
+@import 'ember-paper';
+
+body {
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body.ember-application {
+  flex-direction: row;
+  flex: 1;
+  display: flex;
+}
+
+body > div.ember-view {
+  flex-direction: row;
+  flex: 1;
+  display: flex;
+}
+
+.site-nav-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.inner-sidenav {
+  position: relative;
+}
+
+.content {
+  md-toolbar.md-default-theme {
+    color: #000 !important;
+    background-color: #F5F5F5 !important;
+
+    &+ div {
+      padding: 0 20px;
+    }
+  }
+}

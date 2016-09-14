@@ -1,0 +1,21 @@
+{{#paper-sidenav-container}}
+  {{#paper-sidenav
+     class='md-whiteframe-z2 site-sidenav'
+     lockedOpen='gt-sm'}}
+    {{#paper-toolbar}}
+      {{#paper-toolbar-tools}}Ember Appboy{{/paper-toolbar-tools}}
+    {{/paper-toolbar}}
+
+    {{#paper-content padding=true}}
+      {{#link-to 'index'}}Usage{{/link-to}}
+    {{/paper-content}}
+
+    {{#paper-content padding=true}}
+      {{#link-to 'in-app-messages'}}In App Messages{{/link-to}}
+    {{/paper-content}}
+  {{/paper-sidenav}}
+
+  <div class="flex layout-column content" tabindex="-1" role="main">
+    {{outlet}}
+  </div>
+{{/paper-sidenav-container}}

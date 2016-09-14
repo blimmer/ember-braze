@@ -28,12 +28,12 @@ module.exports = function(environment) {
 
 ### Initializer
 By default, the
-[initializer](https://github.com/blimmer/ember-appboy/blob/master/addon/initializers/appboy.js)
+[initializer](https://github.com/blimmer/ember-appboy/blob/master/addon/instance-initializers/appboy.js)
 is very simple. You'll likely want to customize it for your needs. To do this,
 create an initializer that overrides the addon's flavor:
 
 ```bash
-ember g initializer appboy
+ember g instance-initializer appboy
 ```
 
 Take a look at the
