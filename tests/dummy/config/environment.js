@@ -18,7 +18,8 @@ module.exports = function(environment) {
       // when it is created
     },
     appboy: {
-      apiKey: 'abc123'
+      apiKey: 'abc123',
+      logExitIntent: true,
     }
   };
 

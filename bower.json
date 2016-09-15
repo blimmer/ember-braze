@@ -4,6 +4,7 @@
     "ember": "~2.8.0",
     "ember-cli-shims": "0.1.1",
     "hammer.js": "^2.0.8",
-    "matchMedia": "0.2.0"
+    "matchMedia": "0.2.0",
+    "marked": "^0.3.6"
   }
 }

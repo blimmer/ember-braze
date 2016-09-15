@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('example-1');
     this.route('example-2');
   });
+  this.route('exit-intent');
 });
 
 export default Router;
