@@ -32,7 +32,13 @@ export function initialize(appInstance) {
 
     const _superShowInAppMessage = appboy.display.showInAppMessage;
 
-    appboy.display.showInAppMessage = function(inAppMessage) {
+    // Since appboy does not expose an un-minified version of their SDK,
+    // the inner triggers to show in app messages will refer to the minified
+    // function name. Here we look up what the minified name is through the
+    // public method exposed for consumer use and reassign it below.
+    const minifiedShowInAppMessageName = appboy.display.showInAppMessage.prototype.constructor.name;
+
+    appboy.display.showInAppMessage = appboy.display[minifiedShowInAppMessageName] = function(inAppMessage) {
       const router = appInstance.get('router');
 
       // If the message or buttons within the message have a URI, we need

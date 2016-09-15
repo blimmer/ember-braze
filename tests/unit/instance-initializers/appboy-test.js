@@ -31,7 +31,11 @@ module('Unit | Instance Initializer | appboy', {
       appboyOpenSession = sandbox.stub(appboy, 'openSession');
       appboyLogCustomEvent = sandbox.stub(appboy, 'logCustomEvent');
       appboyAutomaticallyShowNewInAppMessages = sandbox.stub();
-      appboy.display = { automaticallyShowNewInAppMessages: appboyAutomaticallyShowNewInAppMessages };
+      appboy.display = {
+        Fe: () => { throw new Error('Should be overriden!'); }, // simulate minification
+        automaticallyShowNewInAppMessages: appboyAutomaticallyShowNewInAppMessages
+      };
+      appboy.display.showInAppMessage = appboy.display.Fe; // simulate minification
       ouibounceStub = sandbox.stub();
       define('ouibounce', [], () => { return { default: ouibounceStub }; });
     });
@@ -92,4 +96,15 @@ test('it sets up the appboy callback on ouibounce if logExitIntent flag is set',
   const callback = ouibounceStub.getCall(0).args[1].callback;
   callback();
   assert.ok(appboyLogCustomEvent.withArgs('exit intent').calledOnce);
+});
+
+test('it rewires the minified showInAppMessage method', function(assert) {
+  // This is defined in the beforeEach to simulate minification
+  appboy.display.Fe = () => {
+    throw new Error('Minified function should never have been called!');
+  };
+
+  initialize(this.appInstance);
+
+  assert.expect(0); // thrown error would break this test
 });
