@@ -1,6 +1,7 @@
 /* global self */
 import Ember from 'ember';
 import appboy from 'appboy';
+import { parse } from 'ember-appboy/utils/url';
 
 const { ab: { InAppMessage: { ClickAction } } } = appboy;
 const { Logger: { assert } } = Ember;
@@ -17,6 +18,17 @@ function conditionalModule(module) {
   }
 }
 
+export function getAppRoute(uri) {
+  const uriInfo = parse(uri);
+
+  // For now, assume that everything in the same hostname is within the Ember
+  // app. Someday, it might make sense to ask the router to recongize the URI
+  // and determine if it can be handled.
+  if (uriInfo.hostname === window.location.hostname) {
+    return uriInfo.pathname;
+  }
+}
+
 export function initialize(appInstance) {
   // This is what's causing incompatibility with 1.13
   const config = appInstance.resolveRegistration('config:environment');
@@ -28,8 +40,6 @@ export function initialize(appInstance) {
   appboy.initialize(config.appboy.apiKey);
 
   if (!config.appboy.coreOnly) {
-    appboy.display.automaticallyShowNewInAppMessages();
-
     const _superShowInAppMessage = appboy.display.showInAppMessage;
 
     // Since appboy does not expose an un-minified version of their SDK,
@@ -47,21 +57,23 @@ export function initialize(appInstance) {
       // refresh when clicked.
       [inAppMessage, ...inAppMessage.buttons].forEach(function(item) {
         if (item.clickAction === ClickAction.URI && item.uri) {
-          const uri = item.uri;
+          const routerPath = getAppRoute(item.uri);
+          if (!routerPath) { return; } // unrecognized route or different domain
+
           item.subscribeToClickedEvent(() => {
             Ember.run(this, function() {
-              router.transitionTo(uri);
+              router.transitionTo(routerPath);
             });
           });
           item.clickAction = ClickAction.NULL;
           item.uri = undefined;
-
-          return item;
         }
       });
 
       _superShowInAppMessage(inAppMessage);
     };
+
+    appboy.display.automaticallyShowNewInAppMessages();
   }
 
   if (config.appboy.logExitIntent) {

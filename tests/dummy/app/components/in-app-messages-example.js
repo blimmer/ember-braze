@@ -73,6 +73,21 @@ export default Ember.Component.extend({
     appboy.display.showInAppMessage(modal);
   },
 
+  showModalWithExternalLink() {
+    let modal = new appboy.ab.ModalMessage();
+    modal.header  = "Modal with Buttons";
+    modal.message = "This is a modal with a button that transitions outside the Ember App.";
+
+    let button1 = new appboy.ab.InAppMessage.Button();
+    button1.text = 'Example Route 1';
+    button1.clickAction = appboy.ab.InAppMessage.ClickAction.URI;
+    button1.uri = 'https://benlimmer.com';
+
+    modal.buttons = [button1];
+    disableAnimationInTest(modal);
+    appboy.display.showInAppMessage(modal);
+  },
+
   showFullWithOneButton() {
     let modal = new appboy.ab.FullScreenMessage();
     modal.header  = "Fullscreen Message with One Button";
