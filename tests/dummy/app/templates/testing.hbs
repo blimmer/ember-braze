@@ -1,0 +1,35 @@
+{{#paper-toolbar class='md-whiteframe-1dp'}}
+  {{#paper-toolbar-tools}}<h2>Testing</h2>{{/paper-toolbar-tools}}
+{{/paper-toolbar}}
+
+{{#ember-markdown-section}}
+  # Explanation
+  If you see errors like this:
+
+  ```
+    Error: Appboy must be initialized before calling methods.
+      at Error (native)
+      at f (http://localhost:3334/assets/vendor.js:67894:26)
+      at Object.nd [as changeUser] (http://localhost:3334/assets/vendor.js:67898:142)
+      at Class._userChanged (http://localhost:3334/assets/my-app.js:17591:26)
+      at Object.applyStr (http://localhost:3334/assets/vendor.js:34673:20)
+      at Object.sendEvent (http://localhost:3334/assets/vendor.js:28124:28)
+      at Class.trigger (http://localhost:3334/assets/vendor.js:45985:25)
+      at Context.anonymous (http://localhost:3334/assets/tests.js:55121:19)
+      at Context.wrapper (http://localhost:3334/assets/test-support.js:20665:27)
+      at invoke (http://localhost:3334/assets/test-support.js:13942:21)
+  ```
+
+  It's likely that you'll need to mock the appboy API out for testing purposes.
+  I use [ember-sinon](https://github.com/csantero/ember-sinon) to create a mock.
+  For example:
+{{/ember-markdown-section}}
+{{code-snippet name='testing.js'}}
+
+{{#ember-markdown-section}}
+  # The Future
+  I have a [request out to appboy](https://github.com/Appboy/appboy-web-sdk/issues/7)
+  for more first-class support for automated testing. It's possible that, if
+  they implement this kind of feature, I could integrate that logic into this
+  package.
+{{/ember-markdown-section}}

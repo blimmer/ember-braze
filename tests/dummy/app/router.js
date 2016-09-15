@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('configuration');
   this.route('analytics');
   this.route('news-feed');
+  this.route('testing');
 });
 
 export default Router;
