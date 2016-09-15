@@ -1,7 +1,14 @@
 # Change Log
 
-## [v0.1.0](https://github.com/blimmer/ember-appboy/tree/v0.1.0) (2016-09-14)
-[Full Changelog](https://github.com/blimmer/ember-appboy/compare/0.1.0-alpha.1...v0.1.0)
+## [v0.1.1](https://github.com/blimmer/ember-appboy/tree/v0.1.1) (2016-09-14)
+[Full Changelog](https://github.com/blimmer/ember-appboy/compare/0.1.0...v0.1.1)
+
+**Closed issues:**
+
+- Complete first round of documentation [\#2](https://github.com/blimmer/ember-appboy/issues/2)
+
+## [0.1.0](https://github.com/blimmer/ember-appboy/tree/0.1.0) (2016-09-15)
+[Full Changelog](https://github.com/blimmer/ember-appboy/compare/0.1.0-alpha.1...0.1.0)
 
 **Closed issues:**
 
