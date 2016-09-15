@@ -1,5 +1,6 @@
 # ember-appboy
 [![Build Status](https://travis-ci.org/blimmer/ember-appboy.svg?branch=master)](https://travis-ci.org/blimmer/ember-appboy)
+[![Ember Observer Score](https://emberobserver.com/badges/ember-appboy.svg)](https://emberobserver.com/addons/ember-appboy)
 
 ember-appboy exposes the [appboy-web-sdk](https://github.com/Appboy/appboy-web-sdk)
 to your Ember app.
@@ -11,72 +12,13 @@ ember install ember-appboy
 ```
 
 ## Usage
+Please check out the [interactive docs](https://blimmer.github.io/ember-appboy)
+for usage information.
 
-### API Key
-You must set your api key for appboy to work correctly.
-
-```javascript
-// config/environment.js
-module.exports = function(environment) {
-  return {
-    appboy: {
-      apiKey: 'your-api-key'
-    }
-  };
-}
-```
-
-### Initializer
-By default, the
-[initializer](https://github.com/blimmer/ember-appboy/blob/master/addon/instance-initializers/appboy.js)
-is very simple. You'll likely want to customize it for your needs. To do this,
-create an initializer that overrides the addon's flavor:
-
-```bash
-ember g instance-initializer appboy
-```
-
-Take a look at the
-[addon's implementation](https://github.com/blimmer/ember-appboy/blob/master/addon/initializers/appboy.js)
-to get a feel for what you should do in your custom initializer. The
-[appboy-web-sdk docs](https://www.appboy.com/documentation/Web/)
-will also help here.
-
-### ES6 Module
-The appboy SDK is exposed by as ES6 module. You can import it and call methods
-on it, just like you would with the global `window.appboy` version.
-
-```javascript
-import appboy from 'appboy';
-
-// Can be used anywhere - services, routes, components, etc.
-export default Ember.Route.extend({
-  actions: {
-    userDidChange(user) {
-      appboy.changeUser(user.get('id'));
-    }
-  }
-});
-```
-
-## Configuration
-
-## Core SDK Only
-If you only want to use the core-sdk (e.g. you won't be displaying any of the UI
-elements like In-App Messaging, the News Feed, and Feedback), you can define that
-in your `config/environment.js` file.
-
-```javascript
-// config/environment.js
-module.exports = function(environment) {
-  return {
-    appboy: {
-      apiKey: 'your-api-key',
-      coreOnly: true
-    }
-  };
-}
-```
+## Legal
+This addon is in no way affiliated with Appboy. It is developed by
+[Ben Limmer](https://benlimmer.com) and is simply a wrapper around the
+appboy-web-sdk to make integration with Ember apps simple.
 
 ## Developing
 

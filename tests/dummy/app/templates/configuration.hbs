@@ -1,0 +1,44 @@
+{{#paper-toolbar class='md-whiteframe-1dp'}}
+  {{#paper-toolbar-tools}}<h2>Configuration</h2>{{/paper-toolbar-tools}}
+{{/paper-toolbar}}
+
+<div>
+  {{#ember-markdown-section}}
+    ember-appboy can be confiured to meet your needs.
+  {{/ember-markdown-section}}
+
+  <h1>Required Configuration</h1>
+
+  {{#ember-markdown-section}}
+    ### apiKey
+    At the very least, you must configure your apiKey. You can find your API
+    key within the [App Settings](https://dashboard.appboy.com/app_settings/app_settings/)
+    page of your Appboy dashboard.
+  {{/ember-markdown-section}}
+
+  {{code-snippet name='config-api-key.js'}}
+
+  <h1>Optional Configuration</h1>
+  {{#ember-markdown-section}}
+    ### coreOnly
+    If you don't intend to use Appboy's built-in UI capabilities (appboy.display),
+    you can load a core version of the library with display capabilities stripped.
+    However, you will need to implement your own UI for In-App Messaging,
+    the News Feed, and Feedback. Note that UI elements are fully customizable via
+    css, so Appboy generally recommends integration of the complete library instead.
+    More information on the `coreOnly` functionality is available
+    [here](https://github.com/Appboy/appboy-web-sdk#getting-started).
+  {{/ember-markdown-section}}
+  {{code-snippet name='config-core-only.js'}}
+
+  {{#ember-markdown-section}}
+    ### logExitIntent
+    Exit-intent in-app messages appear when visitors are about to navigate away
+    from your site. They provide another opportunity to communicate important
+    information to users, while not interrupting their experience on your site.
+    In-app message campaigns can then be created in the dashboard using
+    `exit intent` as the trigger custom event. More information is available
+    [here](https://www.appboy.com/documentation/Web/#exit-intent-messages).
+  {{/ember-markdown-section}}
+  {{code-snippet name='config-log-exit-intent.js'}}
+</div>

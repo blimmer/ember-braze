@@ -1,10 +1,32 @@
-<h3>Slide-Up In-App Message</h3>
+{{#ember-markdown-section}}
+  ember-appboy customizes the Appboy In-App Messages to be compatible with
+  Ember.
+
+  The default implementation will hard-refresh your site by not using
+  the [Ember Router](https://guides.emberjs.com/v2.8.0/routing/), and instead
+  use `window.location` to transition.
+
+  With the ember-appboy, your team can set up URI redirects, and it this
+  will be passed to `router.transitionTo` automatically.
+
+  For more information, check out the
+  [docs](https://www.appboy.com/documentation/Web/#in-app-messaging).
+{{/ember-markdown-section}}
+
+<h1>Examples</h1>
+<h3>Slide-Up In-App Messages</h3>
+{{#ember-markdown-section}}
+  [Docs](https://www.appboy.com/documentation/Web/#slideup-in-app-messages)
+{{/ember-markdown-section}}
 
 {{#paper-button raised=true onClick=(action showSlideUpMessage)}}
   Slide-Up Example
 {{/paper-button}}
 
-<h3>Modal In-App Message</h3>
+<h3>Modal In-App Messages</h3>
+{{#ember-markdown-section}}
+  [Docs](https://www.appboy.com/documentation/Web/#modal-in-app-messages)
+{{/ember-markdown-section}}
 
 {{#paper-button raised=true onClick=(action showModal)}}
   Modal Example
@@ -28,7 +50,10 @@
   Modal With Two Buttons Example
 {{/paper-button}}
 
-<h3>Fullscreen In-App Message</h3>
+<h3>Fullscreen In-App Messages</h3>
+{{#ember-markdown-section}}
+  [Docs](https://www.appboy.com/documentation/Web/#full-in-app-messages)
+{{/ember-markdown-section}}
 
 {{#paper-button raised=true onClick=(action showFullWithOneButton)}}
   Fullscreen Modal With One Button Example

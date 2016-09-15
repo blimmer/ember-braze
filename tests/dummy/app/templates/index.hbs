@@ -1,3 +1,53 @@
 {{#paper-toolbar class='md-whiteframe-1dp'}}
-  {{#paper-toolbar-tools}}<h2>Usage</h2>{{/paper-toolbar-tools}}
+  {{#paper-toolbar-tools}}<h2>Introduction</h2>{{/paper-toolbar-tools}}
 {{/paper-toolbar}}
+
+<div>
+  {{#ember-markdown-section}}
+    # What is ember-appboy?
+
+    ember-appboy exposes the [appboy-web-sdk](https://github.com/Appboy/appboy-web-sdk)
+    to your Ember app. It integrates the native Web SDK package into the Ember environment.
+
+    For more information on Appboy, visit [Appboy.com](http://appboy.com/).
+  {{/ember-markdown-section}}
+
+  {{#ember-markdown-section}}
+    # Installation
+
+    Installing ember-appboy is easy. Run:
+  {{/ember-markdown-section}}
+  {{code-snippet name="install.sh"}}
+
+  {{#ember-markdown-section}}
+    # Usage
+
+    By default, this addon merges an
+    [instance-initializer](https://github.com/blimmer/ember-appboy/blob/master/addon/instance-initializers/appboy.js)
+    into your app to integrate Appboy's functionality into the Ember environment.
+
+    To utilize additional Appboy functionality, this addon exposes the SDK as an
+    ES6 Module. To use it, you can import it like any other module:
+  {{/ember-markdown-section}}
+  {{code-snippet name='es6-usage.js'}}
+
+  {{#ember-markdown-section}}
+    For more information on the SDK, please check out the
+    [docs](https://js.appboycdn.com/web-sdk/1.5/doc/module-appboy.html).
+  {{/ember-markdown-section}}
+
+  {{#ember-markdown-section}}
+    # Configuration
+
+    You might want to configure ember-appboy to meet your needs. Read more about
+    configuration {{#link-to 'configuration'}}here{{/link-to}}.
+  {{/ember-markdown-section}}
+
+  {{#ember-markdown-section}}
+    # Legal
+
+    This addon is in no way affiliated with Appboy. It is developed by
+    [Ben Limmer](https://benlimmer.com) and is simply a wrapper around the
+    appboy-web-sdk to make integration with Ember apps simple.
+  {{/ember-markdown-section}}
+</div>

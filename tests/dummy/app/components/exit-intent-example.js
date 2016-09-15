@@ -24,7 +24,8 @@ export default Ember.Component.extend({
 
   willDestroyElement() {
     this._super(...arguments);
-    this.get('instance').disable();
+    let instance = this.get('ouibounce');
+    if (instance) { instance.disable(); }
   },
 
   showAppboyModal() {

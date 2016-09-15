@@ -3,11 +3,20 @@
      class='md-whiteframe-z2 site-sidenav'
      lockedOpen='gt-sm'}}
     {{#paper-toolbar}}
-      {{#paper-toolbar-tools}}Ember Appboy{{/paper-toolbar-tools}}
+      {{#paper-toolbar-tools}}
+        Ember Appboy
+        <span class='flex'></span>
+          <a class='icon-link' href='https://benlimmer.com' title='About the Author'>{{fa-icon 'user' size='lg'}}</a>
+          <a class='icon-link' href='https://github.com/blimmer/ember-appboy' title='View the Source'>{{fa-icon 'github' size='lg'}}</a>
+      {{/paper-toolbar-tools}}
     {{/paper-toolbar}}
 
     {{#paper-content padding=true}}
-      {{#link-to 'index'}}Usage{{/link-to}}
+      {{#link-to 'index'}}Introduction{{/link-to}}
+    {{/paper-content}}
+
+    {{#paper-content padding=true}}
+      {{#link-to 'configuration'}}Configuration{{/link-to}}
     {{/paper-content}}
 
     {{#paper-content padding=true}}
@@ -16,6 +25,14 @@
 
     {{#paper-content padding=true}}
       {{#link-to 'exit-intent'}}Exit Intent{{/link-to}}
+    {{/paper-content}}
+
+    {{#paper-content padding=true}}
+      {{#link-to 'analytics'}}Analytics{{/link-to}}
+    {{/paper-content}}
+
+    {{#paper-content padding=true}}
+      {{#link-to 'news-feed'}}News Feed{{/link-to}}
     {{/paper-content}}
   {{/paper-sidenav}}
 

@@ -12,6 +12,9 @@ Router.map(function() {
     this.route('example-2');
   });
   this.route('exit-intent');
+  this.route('configuration');
+  this.route('analytics');
+  this.route('news-feed');
 });
 
 export default Router;
