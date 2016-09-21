@@ -1,10 +1,11 @@
 # Change Log
 
-## [v0.1.2](https://github.com/blimmer/ember-appboy/tree/v0.1.2) (2016-09-15)
-[Full Changelog](https://github.com/blimmer/ember-appboy/compare/0.1.1...v0.1.2)
+## [v0.2.0](https://github.com/blimmer/ember-appboy/tree/v0.2.0) (2016-09-20)
+[Full Changelog](https://github.com/blimmer/ember-appboy/compare/0.1.1...v0.2.0)
 
 **Implemented enhancements:**
 
+- Use appboy-web-sdk 1.6.x [\#22](https://github.com/blimmer/ember-appboy/issues/22)
 - Better URI Handling [\#12](https://github.com/blimmer/ember-appboy/issues/12)
 
 **Fixed bugs:**
@@ -12,8 +13,15 @@
 - Override of appboy.display.showInAppMessage is not working [\#13](https://github.com/blimmer/ember-appboy/issues/13)
 - Better URI Handling [\#12](https://github.com/blimmer/ember-appboy/issues/12)
 
+**Closed issues:**
+
+- Remove minification hack [\#18](https://github.com/blimmer/ember-appboy/issues/18)
+- Add a test for hard transitions [\#16](https://github.com/blimmer/ember-appboy/issues/16)
+
 **Merged pull requests:**
 
+- Remove minification hack. [\#20](https://github.com/blimmer/ember-appboy/pull/20) ([blimmer](https://github.com/blimmer))
+- Test external linking in-app messages. [\#19](https://github.com/blimmer/ember-appboy/pull/19) ([blimmer](https://github.com/blimmer))
 - Better URI handling. [\#15](https://github.com/blimmer/ember-appboy/pull/15) ([blimmer](https://github.com/blimmer))
 - Override minified showInAppMessage\(\) function. [\#14](https://github.com/blimmer/ember-appboy/pull/14) ([blimmer](https://github.com/blimmer))
 - Documentation on Testing [\#10](https://github.com/blimmer/ember-appboy/pull/10) ([blimmer](https://github.com/blimmer))
