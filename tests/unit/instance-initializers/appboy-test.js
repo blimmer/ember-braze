@@ -51,6 +51,13 @@ test('it calls initialize with the api key', function(assert) {
   assert.ok(appboyInitialize.withArgs('abc123').calledOnce);
 });
 
+test('it calls initialize with the api key and options', function(assert) {
+  configStub.returns({ appboy: { apiKey: 'abc123', options: { appVersion: 5 } } });
+  initialize(this.appInstance);
+
+  assert.ok(appboyInitialize.withArgs('abc123', { appVersion: 5 }).calledOnce);
+});
+
 test('it sets up in-app message display automatically', function(assert) {
   initialize(this.appInstance);
 

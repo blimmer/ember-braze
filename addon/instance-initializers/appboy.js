@@ -37,7 +37,7 @@ export function initialize(appInstance) {
     'You must set appboy.apiKey in your environment.js file for ember-appboy to work correctly.'
   );
 
-  appboy.initialize(config.appboy.apiKey);
+  appboy.initialize(config.appboy.apiKey, config.appboy.options);
 
   if (!config.appboy.coreOnly) {
     const _superShowInAppMessage = appboy.display.showInAppMessage;
