@@ -1,6 +1,21 @@
 # Change Log
 
-## [v0.2.0](https://github.com/blimmer/ember-appboy/tree/v0.2.0) (2016-09-20)
+## [v0.2.1](https://github.com/blimmer/ember-appboy/tree/v0.2.1) (2016-10-05)
+[Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.0...v0.2.1)
+
+**Implemented enhancements:**
+
+- passthrough options to appboy initialization [\#25](https://github.com/blimmer/ember-appboy/pull/25) ([trevorrjohn](https://github.com/trevorrjohn))
+
+**Closed issues:**
+
+- Chrome not registering for pushes [\#23](https://github.com/blimmer/ember-appboy/issues/23)
+
+**Merged pull requests:**
+
+- update testing fake api [\#26](https://github.com/blimmer/ember-appboy/pull/26) ([trevorrjohn](https://github.com/trevorrjohn))
+
+## [v0.2.0](https://github.com/blimmer/ember-appboy/tree/v0.2.0) (2016-09-21)
 [Full Changelog](https://github.com/blimmer/ember-appboy/compare/0.1.1...v0.2.0)
 
 **Implemented enhancements:**
