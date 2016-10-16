@@ -1,5 +1,22 @@
 # Change Log
 
+## [v0.2.2](https://github.com/blimmer/ember-appboy/tree/v0.2.2) (2016-10-15)
+[Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.1...v0.2.2)
+
+**Implemented enhancements:**
+
+- Add codeclimate. [\#31](https://github.com/blimmer/ember-appboy/pull/31) ([blimmer](https://github.com/blimmer))
+
+**Closed issues:**
+
+- new release [\#28](https://github.com/blimmer/ember-appboy/issues/28)
+- appboy.registerAppboyPushMessages\(\) [\#27](https://github.com/blimmer/ember-appboy/issues/27)
+- Update docs for testing [\#24](https://github.com/blimmer/ember-appboy/issues/24)
+
+**Merged pull requests:**
+
+- Bump appboy-web-sdk dependency to 1.6.1. [\#30](https://github.com/blimmer/ember-appboy/pull/30) ([blimmer](https://github.com/blimmer))
+
 ## [v0.2.1](https://github.com/blimmer/ember-appboy/tree/v0.2.1) (2016-10-05)
 [Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.0...v0.2.1)
 
