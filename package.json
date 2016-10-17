@@ -53,7 +53,7 @@
     "appboy-web-sdk"
   ],
   "dependencies": {
-    "appboy-web-sdk": "^1.6.1",
+    "appboy-web-sdk": "^1.6.2",
     "broccoli-funnel": "^1.0.6",
     "broccoli-merge-trees": "^1.1.4",
     "ember-cli-babel": "^5.1.6",
