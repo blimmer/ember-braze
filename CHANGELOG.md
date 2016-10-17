@@ -1,6 +1,13 @@
 # Change Log
 
-## [v0.2.2](https://github.com/blimmer/ember-appboy/tree/v0.2.2) (2016-10-15)
+## [v0.2.3](https://github.com/blimmer/ember-appboy/tree/v0.2.3) (2016-10-17)
+[Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.2...v0.2.3)
+
+**Merged pull requests:**
+
+- bump appboy version to 1.6.2 [\#32](https://github.com/blimmer/ember-appboy/pull/32) ([trevorrjohn](https://github.com/trevorrjohn))
+
+## [v0.2.2](https://github.com/blimmer/ember-appboy/tree/v0.2.2) (2016-10-16)
 [Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.1...v0.2.2)
 
 **Implemented enhancements:**
