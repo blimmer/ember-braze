@@ -12,6 +12,10 @@ function disableAnimationInTest(item) {
 export default Ember.Component.extend({
   layout,
 
+  isTestEnv: Ember.computed(function() {
+    return ENV.environment === 'test';
+  }),
+
   showSlideUpMessage() {
     let message = new appboy.ab.SlideUpMessage(
       "This is a Slide-Up In-App Message!"
@@ -24,6 +28,16 @@ export default Ember.Component.extend({
     let modal = new appboy.ab.ModalMessage();
     modal.header  = "Woah, there...";
     modal.message = "Doing this might be a terrible idea but ,idk, here's a modal to make you think twice.";
+    disableAnimationInTest(modal);
+    appboy.display.showInAppMessage(modal);
+  },
+
+  // see https://github.com/blimmer/ember-appboy/issues/35
+  showModalWithUndefinedButtons() {
+    let modal = new appboy.ab.ModalMessage();
+    modal.header  = "Woah, there...";
+    modal.message = "Doing this might be a terrible idea but ,idk, here's a modal to make you think twice.";
+    modal.buttons = undefined;
     disableAnimationInTest(modal);
     appboy.display.showInAppMessage(modal);
   },

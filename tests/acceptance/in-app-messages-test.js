@@ -72,3 +72,12 @@ test('modals with external links', function(assert) {
     appboy.ab.WindowUtils.openUri = prevOpenUri;
   });
 });
+
+test('modals with undefined button arrays', function(assert) {
+  visit('/in-app-messages');
+  click('#trigger-modal-with-undefined-buttons');
+  andThen(function() {
+    let $el = findWithAssert('.ab-in-app-message', 'body');
+    assert.equal($el.length, 1);
+  });
+});

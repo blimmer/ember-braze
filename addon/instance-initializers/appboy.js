@@ -49,6 +49,7 @@ export function initialize(appInstance) {
       // to grab the URI and hide it from appboy to do a "soft" transition
       // with the Ember Router vs. an anchor tag, which causes the app to
       // refresh when clicked.
+      inAppMessage.buttons = inAppMessage.buttons || [];
       [inAppMessage, ...inAppMessage.buttons].forEach(function(item) {
         if (item.clickAction === ClickAction.URI && item.uri) {
           const routerPath = getAppRoute(item.uri);

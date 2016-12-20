@@ -32,6 +32,13 @@
   Modal Example
 {{/paper-button}}
 
+{{#if isTestEnv}}
+  {{! no need to show this to consumers of the docs }}
+  {{#paper-button id='trigger-modal-with-undefined-buttons' raised=true onClick=(action showModalWithUndefinedButtons)}}
+    Undefined Button Modal Example
+  {{/paper-button}}
+{{/if}}
+
 <br />
 
 {{#paper-button id='trigger-modal-with-transition' raised=true onClick=(action showModalWithTransition)}}
