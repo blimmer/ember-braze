@@ -80,4 +80,5 @@ test('modals with undefined button arrays', function(assert) {
     let $el = findWithAssert('.ab-in-app-message', 'body');
     assert.equal($el.length, 1);
   });
+  click('.ab-in-app-message', 'body');
 });
