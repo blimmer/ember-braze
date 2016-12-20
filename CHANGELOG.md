@@ -1,11 +1,20 @@
 # Change Log
 
-## [v0.2.4](https://github.com/blimmer/ember-appboy/tree/v0.2.4) (2016-11-16)
-[Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.3...v0.2.4)
+## [v0.2.5](https://github.com/blimmer/ember-appboy/tree/v0.2.5) (2016-12-20)
+[Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.4...v0.2.5)
+
+**Fixed bugs:**
+
+- Modals with no buttons throws an exception [\#35](https://github.com/blimmer/ember-appboy/issues/35)
+- Ember \< 2.3 Tests Fail [\#6](https://github.com/blimmer/ember-appboy/issues/6)
 
 **Merged pull requests:**
 
-- bump appboy version to 1.6.3 [\#33](https://github.com/blimmer/ember-appboy/pull/33) ([trevorrjohn](https://github.com/trevorrjohn))
+- Work around undefined IAM.buttons. [\#36](https://github.com/blimmer/ember-appboy/pull/36) ([blimmer](https://github.com/blimmer))
+- Upgrade ember-CLI. [\#34](https://github.com/blimmer/ember-appboy/pull/34) ([blimmer](https://github.com/blimmer))
+
+## [v0.2.4](https://github.com/blimmer/ember-appboy/tree/v0.2.4) (2016-11-16)
+[Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.3...v0.2.4)
 
 ## [v0.2.3](https://github.com/blimmer/ember-appboy/tree/v0.2.3) (2016-10-17)
 [Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.2...v0.2.3)
