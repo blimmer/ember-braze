@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.2.6](https://github.com/blimmer/ember-appboy/tree/v0.2.6) (2017-01-12)
+[Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.5...v0.2.6)
+
+**Implemented enhancements:**
+
+- Update ember-appboy to 1.6.5 or better. [\#37](https://github.com/blimmer/ember-appboy/pull/37) ([blimmer](https://github.com/blimmer))
+
 ## [v0.2.5](https://github.com/blimmer/ember-appboy/tree/v0.2.5) (2016-12-20)
 [Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.4...v0.2.5)
 
