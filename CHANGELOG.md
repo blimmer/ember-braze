@@ -1,5 +1,16 @@
 # Change Log
 
+## [v0.2.7](https://github.com/blimmer/ember-appboy/tree/v0.2.7) (2017-04-05)
+[Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.6...v0.2.7)
+
+**Fixed bugs:**
+
+- Fix missing css import [\#39](https://github.com/blimmer/ember-appboy/pull/39) ([blimmer](https://github.com/blimmer))
+
+**Closed issues:**
+
+- appboy-web-sdk 1.6.7 broke build [\#38](https://github.com/blimmer/ember-appboy/issues/38)
+
 ## [v0.2.6](https://github.com/blimmer/ember-appboy/tree/v0.2.6) (2017-01-12)
 [Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.5...v0.2.6)
 
