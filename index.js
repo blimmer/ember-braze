@@ -27,7 +27,7 @@ module.exports = {
       app.import(vendor + '/appboy-web-sdk/appboy.core.min.js');
     } else {
       app.import(vendor + '/appboy-web-sdk/appboy.min.js');
-      app.import(vendor + '/appboy-web-sdk/appboy.css');
+      app.import(vendor + '/appboy-web-sdk/appboy.min.css');
     }
 
     app.import(vendor + '/shims/appboy.js');
@@ -50,7 +50,7 @@ module.exports = {
     if (options.coreOnly) {
       appboyIncludes = ['appboy.core.min.js'];
     } else {
-      appboyIncludes = ['appboy.min.js', 'appboy.css'];
+      appboyIncludes = ['appboy.min.js', 'appboy.min.css'];
     }
 
     var appboy = new Funnel(appboyPath, {
