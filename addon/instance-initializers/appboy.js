@@ -2,21 +2,10 @@
 import Ember from 'ember';
 import appboy from 'appboy';
 import { parse } from 'ember-appboy/utils/url';
+import requireModule from 'ember-require-module';
 
 const { ab: { InAppMessage: { ClickAction } } } = appboy;
 const { Logger: { assert } } = Ember;
-
-// Since we don't include ouibounce unless you need it, we need to conditionally
-// import the module from require.
-function conditionalModule(module) {
-  const rjs = self.requirejs;
-  if (
-    (rjs.has && rjs.has(module)) ||
-    (!rjs.has && (rjs.entries[module] || rjs.entries[module + '/index']))
-  ) {
-    return self.require(module).default;
-  }
-}
 
 export function getAppRoute(uri) {
   const uriInfo = parse(uri);
@@ -72,7 +61,7 @@ export function initialize(appInstance) {
   }
 
   if (config.appboy.logExitIntent) {
-    let ouibounce = conditionalModule('ouibounce');
+    let ouibounce = requireModule('ouibounce');
     ouibounce(false, {
       callback: function() { appboy.logCustomEvent('exit intent'); }
     });

@@ -5,6 +5,7 @@ import destroyApp from '../../helpers/destroy-app';
 import test from 'dummy/tests/ember-sinon-qunit/test';
 import appboy from 'appboy';
 import sinon from 'sinon';
+import * as emberRequireModule from 'ember-require-module';
 
 let configStub,
     ouibounceStub,
@@ -35,7 +36,7 @@ module('Unit | Instance Initializer | appboy', {
         automaticallyShowNewInAppMessages: appboyAutomaticallyShowNewInAppMessages
       };
       ouibounceStub = sandbox.stub();
-      define('ouibounce', [], () => { return { default: ouibounceStub }; });
+      sandbox.stub(emberRequireModule, 'default').withArgs('ouibounce').returns(ouibounceStub);
     });
   },
   afterEach: function() {
