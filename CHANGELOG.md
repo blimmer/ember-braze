@@ -1,6 +1,17 @@
 # Change Log
 
-## [v0.2.7](https://github.com/blimmer/ember-appboy/tree/v0.2.7) (2017-04-05)
+## [v0.2.8](https://github.com/blimmer/ember-appboy/tree/v0.2.8) (2017-04-06)
+[Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.7...v0.2.8)
+
+**Fixed bugs:**
+
+- Move ember-require-module to runtime dependencies. [\#41](https://github.com/blimmer/ember-appboy/pull/41) ([blimmer](https://github.com/blimmer))
+
+**Closed issues:**
+
+- Could not find module `ember-require-module` [\#40](https://github.com/blimmer/ember-appboy/issues/40)
+
+## [v0.2.7](https://github.com/blimmer/ember-appboy/tree/v0.2.7) (2017-04-06)
 [Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.6...v0.2.7)
 
 **Fixed bugs:**
