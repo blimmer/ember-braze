@@ -2,7 +2,7 @@ import Ember from 'ember';
 import { initialize } from 'dummy/instance-initializers/appboy';
 import { module } from 'qunit';
 import destroyApp from '../../helpers/destroy-app';
-import test from 'dummy/tests/ember-sinon-qunit/test';
+import test from 'ember-sinon-qunit/test-support/test';
 import appboy from 'appboy';
 import sinon from 'sinon';
 import * as emberRequireModule from 'ember-require-module';

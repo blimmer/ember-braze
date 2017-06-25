@@ -1,32 +1,34 @@
-{{#ember-markdown-section}}
-  ember-appboy customizes the Appboy In-App Messages to be compatible with
-  Ember.
-
-  The default implementation will hard-refresh your site by not using
-  the [Ember Router](https://guides.emberjs.com/v2.8.0/routing/), and instead
-  use `window.location` to transition.
-
-  With the ember-appboy, your team can set up URI redirects, and it this
-  will be passed to `router.transitionTo` automatically.
-
+<p>
+  ember-appboy customizes the Appboy In-App Messages to be compatible with Ember.
+</p>
+<p>
+    The default implementation will hard-refresh your site by not using
+    the <a href="https://guides.emberjs.com/v2.8.0/routing/">Ember Router</a>, and instead
+    use <code>window.location</code> to transition.
+</p>
+<p>
+  With the ember-appboy, your team can set up URI redirects, and it will be passed to <code>router.transitionTo</code> automatically.
+</p>
+<p>
   For more information, check out the
-  [docs](https://www.appboy.com/documentation/Web/#in-app-messaging).
-{{/ember-markdown-section}}
+  <a href="https://www.appboy.com/documentation/Web/#in-app-messaging">docs</a>.
+</p>
+
 
 <h1>Examples</h1>
 <h3>Slide-Up In-App Messages</h3>
-{{#ember-markdown-section}}
-  [Docs](https://www.appboy.com/documentation/Web/#slideup-in-app-messages)
-{{/ember-markdown-section}}
+<p>
+  <a href="https://www.appboy.com/documentation/Web/#slideup-in-app-messages">Docs</a>
+</p>
 
 {{#paper-button raised=true onClick=(action showSlideUpMessage)}}
   Slide-Up Example
 {{/paper-button}}
 
 <h3>Modal In-App Messages</h3>
-{{#ember-markdown-section}}
-  [Docs](https://www.appboy.com/documentation/Web/#modal-in-app-messages)
-{{/ember-markdown-section}}
+<p>
+  <a href="https://www.appboy.com/documentation/Web/#modal-in-app-messages">Docs</a>
+</p>
 
 {{#paper-button raised=true onClick=(action showModal)}}
   Modal Example
@@ -64,9 +66,9 @@
 {{/paper-button}}
 
 <h3>Fullscreen In-App Messages</h3>
-{{#ember-markdown-section}}
-  [Docs](https://www.appboy.com/documentation/Web/#full-in-app-messages)
-{{/ember-markdown-section}}
+<p>
+  <a href="https://www.appboy.com/documentation/Web/#full-in-app-messages">Docs</a>
+</p>
 
 {{#paper-button raised=true onClick=(action showFullWithOneButton)}}
   Fullscreen Modal With One Button Example

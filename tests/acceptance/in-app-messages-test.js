@@ -1,4 +1,4 @@
-import test from 'dummy/tests/ember-sinon-qunit/test';
+import test from 'ember-sinon-qunit/test-support/test';
 import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
 import appboy from 'appboy';
 

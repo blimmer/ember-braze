@@ -2,34 +2,38 @@
   {{#paper-toolbar-tools}}<h2>Testing</h2>{{/paper-toolbar-tools}}
 {{/paper-toolbar}}
 
-{{#ember-markdown-section}}
-  # Explanation
-  If you see errors like this:
+<div>
+  <h1 id="explanation">Explanation</h1>
+  <p>If you see errors like this:</p>
+  <pre>
+    <code>
+      Error: Appboy must be initialized before calling methods.
+        at Error (native)
+        at f (http://localhost:3334/assets/vendor-8d99286cfe5c886b3eb254153a7d486c.js:67894:26)
+        at Object.nd [as changeUser] (http://localhost:3334/assets/vendor-8d99286cfe5c886b3eb254153a7d486c.js:67898:142)
+        at Class._userChanged (http://localhost:3334/assets/my-app.js:17591:26)
+        at Object.applyStr (http://localhost:3334/assets/vendor-8d99286cfe5c886b3eb254153a7d486c.js:34673:20)
+        at Object.sendEvent (http://localhost:3334/assets/vendor-8d99286cfe5c886b3eb254153a7d486c.js:28124:28)
+        at Class.trigger (http://localhost:3334/assets/vendor-8d99286cfe5c886b3eb254153a7d486c.js:45985:25)
+        at Context.anonymous (http://localhost:3334/assets/tests.js:55121:19)
+        at Context.wrapper (http://localhost:3334/assets/test-support.js:20665:27)
+        at invoke (http://localhost:3334/assets/test-support.js:13942:21)
+    </code>
+  </pre>
+  <p>
+    It's likely that you'll need to mock the appboy API out for testing purposes.
+    I use <a href="https://github.com/csantero/ember-sinon">ember-sinon</a> to create a mock.
+    For example:
+  </p>
+  {{code-snippet name='testing.js'}}
+</div>
 
-  ```
-    Error: Appboy must be initialized before calling methods.
-      at Error (native)
-      at f (http://localhost:3334/assets/vendor.js:67894:26)
-      at Object.nd [as changeUser] (http://localhost:3334/assets/vendor.js:67898:142)
-      at Class._userChanged (http://localhost:3334/assets/my-app.js:17591:26)
-      at Object.applyStr (http://localhost:3334/assets/vendor.js:34673:20)
-      at Object.sendEvent (http://localhost:3334/assets/vendor.js:28124:28)
-      at Class.trigger (http://localhost:3334/assets/vendor.js:45985:25)
-      at Context.anonymous (http://localhost:3334/assets/tests.js:55121:19)
-      at Context.wrapper (http://localhost:3334/assets/test-support.js:20665:27)
-      at invoke (http://localhost:3334/assets/test-support.js:13942:21)
-  ```
-
-  It's likely that you'll need to mock the appboy API out for testing purposes.
-  I use [ember-sinon](https://github.com/csantero/ember-sinon) to create a mock.
-  For example:
-{{/ember-markdown-section}}
-{{code-snippet name='testing.js'}}
-
-{{#ember-markdown-section}}
-  # The Future
-  I have a [request out to appboy](https://github.com/Appboy/appboy-web-sdk/issues/7)
-  for more first-class support for automated testing. It's possible that, if
-  they implement this kind of feature, I could integrate that logic into this
-  package.
-{{/ember-markdown-section}}
+<div>
+  <h1 id='the-future'>The Future</h1>
+  <p>
+    I have a <a href="https://github.com/Appboy/appboy-web-sdk/issues/7">request out to appboy</a>
+    for more first-class support for automated testing. It's possible that, if
+    they implement this kind of feature, I could integrate that logic into this
+    package.
+  </p>
+</div>
