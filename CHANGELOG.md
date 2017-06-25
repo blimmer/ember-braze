@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.2.9](https://github.com/blimmer/ember-appboy/tree/v0.2.9) (2017-06-25)
+[Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.8...v0.2.9)
+
+**Merged pull requests:**
+
+- Upgrade appboy-web-sdk to 1.6.11. [\#43](https://github.com/blimmer/ember-appboy/pull/43) ([blimmer](https://github.com/blimmer))
+- Upgrade Ember-CLI [\#42](https://github.com/blimmer/ember-appboy/pull/42) ([blimmer](https://github.com/blimmer))
+
 ## [v0.2.8](https://github.com/blimmer/ember-appboy/tree/v0.2.8) (2017-04-06)
 [Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.7...v0.2.8)
 

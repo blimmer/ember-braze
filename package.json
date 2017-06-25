@@ -1,6 +1,6 @@
 {
   "name": "ember-appboy",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Integrates the appboy web sdk into your ember app.",
   "directories": {
     "doc": "doc",
