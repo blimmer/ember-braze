@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.2.10](https://github.com/blimmer/ember-appboy/tree/v0.2.10) (2017-08-13)
+[Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.9...v0.2.10)
+
+**Merged pull requests:**
+
+- Upgrade to Ember 2.14.x & Latest SDK [\#44](https://github.com/blimmer/ember-appboy/pull/44) ([blimmer](https://github.com/blimmer))
+
 ## [v0.2.9](https://github.com/blimmer/ember-appboy/tree/v0.2.9) (2017-06-25)
 [Full Changelog](https://github.com/blimmer/ember-appboy/compare/v0.2.8...v0.2.9)
 
