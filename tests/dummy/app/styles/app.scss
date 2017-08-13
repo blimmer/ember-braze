@@ -2,10 +2,23 @@ $primary: 'appboy-black';
 
 @import 'color-palette';
 $color-appboy-black: (
+  '50': #1C222B,
   '100': #1C222B,
+  '200': #1C222B,
+  '300': #1C222B,
+  '400': #1C222B,
   '500': #1C222B,
   '600': #1C222B,
-  'contrast': $light-contrast-color
+  '700': #1C222B,
+  '800': #1C222B,
+  '900': #1C222B,
+  'A100': #1C222B,
+  'A200': #1C222B,
+  'A400': #1C222B,
+  'A700': #1C222B,
+  'contrastDefaultColor': $light-contrast-color,
+  'contrastDarkColors': ('50', '100', '200', 'A100', 'A200'),
+  'contrastStrongLightColors': ('300', '400')
 ) !default;
 
 $colors: map-merge($colors, (
