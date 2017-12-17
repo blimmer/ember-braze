@@ -18,7 +18,7 @@
   "author": "Ben Limmer <hello@benlimmer.com> (https://benlimmer.com/)",
   "license": "MIT",
   "dependencies": {
-    "appboy-web-sdk": "^1.6.12",
+    "appboy-web-sdk": "^2.0.5",
     "broccoli-funnel": "^1.0.6",
     "broccoli-merge-trees": "^2.0.0",
     "ember-cli-babel": "^6.7.2",
