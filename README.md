@@ -1,4 +1,4 @@
-# ember-appboy
+# ember-appboy (braze)
 [![Build Status](https://travis-ci.org/blimmer/ember-appboy.svg?branch=master)](https://travis-ci.org/blimmer/ember-appboy)
 [![Ember Observer Score](https://emberobserver.com/badges/ember-appboy.svg)](https://emberobserver.com/addons/ember-appboy)
 [![Code Climate](https://codeclimate.com/github/blimmer/ember-appboy/badges/gpa.svg)](https://codeclimate.com/github/blimmer/ember-appboy)

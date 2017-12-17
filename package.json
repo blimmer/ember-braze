@@ -56,7 +56,9 @@
   "keywords": [
     "ember-addon",
     "appboy",
-    "appboy-web-sdk"
+    "appboy-web-sdk",
+    "braze",
+    "braze-web-sdk"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config",
