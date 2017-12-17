@@ -1,6 +1,6 @@
 {
   "name": "ember-braze",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "Integrates the braze web sdk (formerly appboy) into your ember app.",
   "directories": {
     "doc": "doc",
