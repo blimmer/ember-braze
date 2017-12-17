@@ -1,4 +1,5 @@
-import Ember from 'ember';
+import Application from '@ember/application';
+import { run } from '@ember/runloop';
 import { initialize } from 'dummy/instance-initializers/appboy';
 import { module } from 'qunit';
 import destroyApp from '../../helpers/destroy-app';
@@ -21,8 +22,8 @@ module('Unit | Instance Initializer | appboy', {
   },
 
   beforeEach: function() {
-    Ember.run(() => {
-      this.application = Ember.Application.create();
+    run(() => {
+      this.application = Application.create();
       this.appInstance = this.application.buildInstance();
       // default
       configStub = sandbox.stub(this.appInstance, 'resolveRegistration')
@@ -40,7 +41,7 @@ module('Unit | Instance Initializer | appboy', {
     });
   },
   afterEach: function() {
-    Ember.run(this.appInstance, 'destroy');
+    run(this.appInstance, 'destroy');
     destroyApp(this.application);
     sandbox.restore();
   },

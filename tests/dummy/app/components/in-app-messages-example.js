@@ -1,4 +1,5 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
+import Component from '@ember/component';
 import layout from '../templates/components/in-app-messages-example';
 import appboy from 'appboy';
 import ENV from '../config/environment';
@@ -9,10 +10,10 @@ function disableAnimationInTest(item) {
   }
 }
 
-export default Ember.Component.extend({
+export default Component.extend({
   layout,
 
-  isTestEnv: Ember.computed(function() {
+  isTestEnv: computed(function() {
     return ENV.environment === 'test';
   }),
 
