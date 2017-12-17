@@ -159,9 +159,9 @@ aot-test-generators@^0.1.0:
   dependencies:
     jsesc "^2.5.0"
 
-appboy-web-sdk@^1.6.12:
-  version "1.6.12"
-  resolved "https://registry.yarnpkg.com/appboy-web-sdk/-/appboy-web-sdk-1.6.12.tgz#a17df605e277cc012bcfe78d83fe09e06d555490"
+appboy-web-sdk@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/appboy-web-sdk/-/appboy-web-sdk-2.0.5.tgz#300254efacf9b2627db8e1b7adb0783e0188491b"
 
 aproba@^1.0.3:
   version "1.2.0"
