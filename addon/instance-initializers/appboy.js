@@ -1,11 +1,11 @@
 /* global self */
-import Ember from 'ember';
+import { run } from '@ember/runloop';
+
 import appboy from 'appboy';
 import { parse } from 'ember-appboy/utils/url';
 import requireModule from 'ember-require-module';
 
 const { ab: { InAppMessage: { ClickAction } } } = appboy;
-const { Logger: { assert } } = Ember;
 
 export function getAppRoute(uri) {
   const uriInfo = parse(uri);
@@ -21,10 +21,10 @@ export function getAppRoute(uri) {
 export function initialize(appInstance) {
   // This is what's causing incompatibility with 1.13
   const config = appInstance.resolveRegistration('config:environment');
-  assert(
-    config.appboy.apiKey !== undefined,
-    'You must set appboy.apiKey in your environment.js file for ember-appboy to work correctly.'
-  );
+
+  if(!config.appboy.apiKey) {
+    console.warn('You must set appboy.apiKey in your environment.js file for ember-appboy to work correctly.')
+  }
 
   appboy.initialize(config.appboy.apiKey, config.appboy.options);
 
@@ -45,7 +45,7 @@ export function initialize(appInstance) {
           if (!routerPath) { return; } // unrecognized route or different domain
 
           item.subscribeToClickedEvent(() => {
-            Ember.run(this, function() {
+            run(this, function() {
               router.transitionTo(routerPath);
             });
           });
