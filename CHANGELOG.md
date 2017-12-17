@@ -1,6 +1,13 @@
 # Change Log
 
-## [0.2.11](https://github.com/blimmer/ember-braze/tree/0.2.11) (2017-12-17)
+## [0.3.0](https://github.com/blimmer/ember-braze/tree/0.3.0) (2017-12-17)
+[Full Changelog](https://github.com/blimmer/ember-braze/compare/v0.2.11...0.3.0)
+
+**Merged pull requests:**
+
+- Upgrade appboy-web-sdk to 2.x [\#9](https://github.com/blimmer/ember-braze/pull/9) ([blimmer](https://github.com/blimmer))
+
+## [v0.2.11](https://github.com/blimmer/ember-braze/tree/v0.2.11) (2017-12-17)
 **Merged pull requests:**
 
 - s/appboy/braze [\#8](https://github.com/blimmer/ember-braze/pull/8) ([blimmer](https://github.com/blimmer))
