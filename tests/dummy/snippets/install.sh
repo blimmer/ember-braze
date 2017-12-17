@@ -1,1 +1,1 @@
-ember install ember-appboy
+ember install ember-braze

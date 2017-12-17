@@ -6,7 +6,7 @@ var mergeTrees = require('broccoli-merge-trees');
 var path = require('path');
 
 module.exports = {
-  name: 'ember-appboy',
+  name: 'ember-braze',
 
   _getEmberAppboyOptions: function() {
     return (this.project.config(process.env.EMBER_ENV) || {}).appboy || {};
