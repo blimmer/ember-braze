@@ -8,7 +8,7 @@ var path = require('path');
 module.exports = {
   name: 'ember-braze',
 
-  _getEmberAppboyOptions: function() {
+  _getEmberBrazeOptions: function() {
     return (this.project.config(process.env.EMBER_ENV) || {}).appboy || {};
   },
 
@@ -21,7 +21,7 @@ module.exports = {
     this._super.included.apply(this, arguments);
 
     var vendor = this.treePaths.vendor;
-    var options = this._getEmberAppboyOptions();
+    var options = this._getEmberBrazeOptions();
 
     if (options.coreOnly) {
       app.import(vendor + '/appboy-web-sdk/appboy.core.min.js');
@@ -41,7 +41,7 @@ module.exports = {
   },
 
   treeForVendor: function(vendorTree) {
-    var options = this._getEmberAppboyOptions();
+    var options = this._getEmberBrazeOptions();
     var trees = [vendorTree];
 
     var appboyPath = path.dirname(require.resolve('appboy-web-sdk'));
