@@ -1,4 +1,4 @@
-import { parse } from 'ember-appboy/utils/url';
+import { parse } from 'ember-braze/utils/url';
 import { module, test } from 'qunit';
 
 const url = 'https://imoscar.com:2/give-pop?pop=your#hair';

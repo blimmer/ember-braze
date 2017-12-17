@@ -1,7 +1,7 @@
 {
-  "name": "ember-appboy",
+  "name": "ember-braze",
   "version": "0.2.10",
-  "description": "Integrates the appboy web sdk into your ember app.",
+  "description": "Integrates the braze web sdk (formerly appboy) into your ember app.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,7 +11,7 @@
     "start": "ember serve",
     "test": "ember try:each"
   },
-  "repository": "https://github.com/blimmer/ember-appboy",
+  "repository": "https://github.com/blimmer/ember-braze",
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
   },
@@ -55,13 +55,13 @@
   },
   "keywords": [
     "ember-addon",
-    "appboy",
-    "appboy-web-sdk",
     "braze",
-    "braze-web-sdk"
+    "braze-web-sdk",
+    "appboy",
+    "appboy-web-sdk"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "https://blimmer.github.io/ember-appboy"
+    "demoURL": "https://blimmer.github.io/ember-braze"
   }
 }

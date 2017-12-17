@@ -1,1 +1,1 @@
-export { default, initialize } from 'ember-appboy/instance-initializers/appboy';
+export { default, initialize } from 'ember-braze/instance-initializers/appboy';

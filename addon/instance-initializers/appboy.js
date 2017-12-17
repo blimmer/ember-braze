@@ -2,7 +2,7 @@
 import { run } from '@ember/runloop';
 
 import appboy from 'appboy';
-import { parse } from 'ember-appboy/utils/url';
+import { parse } from 'ember-braze/utils/url';
 import requireModule from 'ember-require-module';
 
 const { ab: { InAppMessage: { ClickAction } } } = appboy;
@@ -23,7 +23,7 @@ export function initialize(appInstance) {
   const config = appInstance.resolveRegistration('config:environment');
 
   if(!config.appboy.apiKey) {
-    console.warn('You must set appboy.apiKey in your environment.js file for ember-appboy to work correctly.')
+    console.warn('You must set appboy.apiKey in your environment.js file for ember-braze to work correctly.')
   }
 
   appboy.initialize(config.appboy.apiKey, config.appboy.options);
