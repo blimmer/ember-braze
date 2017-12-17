@@ -25,8 +25,7 @@ appboy-web-sdk to make integration with Ember apps simple.
 
 * `git clone <repository-url>` this repository
 * `cd ember-appboy`
-* `npm install`
-* `bower install`
+* `yarn install`
 
 ## Running
 
@@ -35,7 +34,7 @@ appboy-web-sdk to make integration with Ember apps simple.
 
 ## Running Tests
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
+* `yarn test` (Runs `ember try:each` to test your addon against multiple Ember versions)
 * `ember test`
 * `ember test --server`
 
@@ -43,4 +42,4 @@ appboy-web-sdk to make integration with Ember apps simple.
 
 * `ember build`
 
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
