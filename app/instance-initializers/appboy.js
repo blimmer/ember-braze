@@ -1,1 +1,1 @@
-export { default, initialize } from 'ember-braze/instance-initializers/appboy';
+export { default, initialize, getAppRoute } from 'ember-braze/instance-initializers/appboy';

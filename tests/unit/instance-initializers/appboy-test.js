@@ -1,6 +1,6 @@
 import Application from '@ember/application';
 import { run } from '@ember/runloop';
-import { initialize } from 'dummy/instance-initializers/appboy';
+import { initialize, getAppRoute } from 'dummy/instance-initializers/appboy';
 import { module } from 'qunit';
 import destroyApp from '../../helpers/destroy-app';
 import test from 'ember-sinon-qunit/test-support/test';
@@ -103,4 +103,11 @@ test('it sets up the appboy callback on ouibounce if logExitIntent flag is set',
   const callback = ouibounceStub.getCall(0).args[1].callback;
   callback();
   assert.ok(appboyLogCustomEvent.withArgs('exit intent').calledOnce);
+});
+
+test('it processes hash-fragment URLs correctly', function(assert) {
+  let regularURI = '/foo/bar'
+  let hashFragmentURI = `#${regularURI}`;
+
+  assert.equal(getAppRoute(hashFragmentURI), regularURI);
 });
