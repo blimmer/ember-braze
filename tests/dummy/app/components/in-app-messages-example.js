@@ -103,6 +103,22 @@ export default Component.extend({
     appboy.display.showInAppMessage(modal);
   },
 
+  showModalWithHashFragmentLink() {
+    let modal = new appboy.ab.ModalMessage();
+    modal.header  = "Modal with Hash Fragment";
+    modal.message = "This is a modal with a button that references a hash fragment, which " +
+      "should work equivalently to a relative URL.";
+
+    let button1 = new appboy.ab.InAppMessage.Button();
+    button1.text = 'Example Route 1';
+    button1.clickAction = appboy.ab.InAppMessage.ClickAction.URI;
+    button1.uri = '#/in-app-messages/example-1';
+
+    modal.buttons = [button1];
+    disableAnimationInTest(modal);
+    appboy.display.showInAppMessage(modal);
+  },
+
   showFullWithOneButton() {
     let modal = new appboy.ab.FullScreenMessage();
     modal.header  = "Fullscreen Message with One Button";

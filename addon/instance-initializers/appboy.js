@@ -14,7 +14,13 @@ export function getAppRoute(uri) {
   // app. Someday, it might make sense to ask the router to recongize the URI
   // and determine if it can be handled.
   if (uriInfo.hostname === window.location.hostname) {
-    return uriInfo.pathname;
+    if(!!uriInfo.hash && uriInfo.pathname === window.location.pathname) {
+      // URL provided as hash fragment (and pathname is same as current location)
+      // indicating possible HashLocation usage.
+      return uriInfo.hash.substr(1);
+    } else {
+      return uriInfo.pathname;
+    }
   }
 }
 

@@ -82,3 +82,16 @@ test('modals with undefined button arrays', function(assert) {
   });
   click('.ab-in-app-message', 'body');
 });
+
+test('modals with hash-fragment link', function(assert) {
+  visit('/in-app-messages');
+  click('#trigger-modal-with-hash-fragment-link');
+  andThen(function() {
+    let $el = findWithAssert('.ab-in-app-message', 'body');
+    assert.equal($el.length, 1);
+  });
+  click('.ab-message-button', 'body');
+  andThen(function() {
+    assert.equal(currentURL(), '/in-app-messages/example-1');
+  });
+});
