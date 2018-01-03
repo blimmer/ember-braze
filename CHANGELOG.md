@@ -1,7 +1,18 @@
 # Change Log
 
-## [0.3.0](https://github.com/blimmer/ember-braze/tree/0.3.0) (2017-12-17)
-[Full Changelog](https://github.com/blimmer/ember-braze/compare/v0.2.11...0.3.0)
+## [0.4.0](https://github.com/blimmer/ember-braze/tree/0.4.0) (2018-01-03)
+[Full Changelog](https://github.com/blimmer/ember-braze/compare/v0.3.0...0.4.0)
+
+**Closed issues:**
+
+- \[Enhancement\] Better support for hash fragments [\#10](https://github.com/blimmer/ember-braze/issues/10)
+
+**Merged pull requests:**
+
+- Adds support for linking hash-fragment-only URLs in modals [\#11](https://github.com/blimmer/ember-braze/pull/11) ([gorner](https://github.com/gorner))
+
+## [v0.3.0](https://github.com/blimmer/ember-braze/tree/v0.3.0) (2017-12-17)
+[Full Changelog](https://github.com/blimmer/ember-braze/compare/v0.2.11...v0.3.0)
 
 **Merged pull requests:**
 
